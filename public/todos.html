@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Todo Management app</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="my-app.css">
+</head>
+
+<body>
+
+  <article>
+    <h1 class="TodoPageTitle">My To-do List</h1>
+
+    <section class="AddTodo">
+      <input class="Addtodo-text" type="text" placeholder="What's next?">
+      <input class="Addtodo-date" type="date">
+      <input class="Addtodo-Button" type="button" value="Add">
+    </section>
+
+
+    <section class="Todosection">
+
+      <label class="TodosectionTitle">
+        <p class="TodosectionTitle-text">Due Today</p>
+        <p class="TodosectionTitle-count">0/4</p>
+      </label>
+
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p>Submit SaaS 201 project</p>
+            <p class="Todocontainer-overdue">Overdue</p>
+          </label>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p>Call accountant</p>
+            <img class="TodoItem-delete" src="trashcan.svg">
+          </label>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="Todosection">
+
+      <label class="TodosectionTitle">
+        <p class="TodosectionTitle-text">Due Tomorrow</p>
+        <p class="TodosectionTitle-count">0/3</p>
+      </label>
+
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p> Refill groceries</p>
+          </label>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="Todosection">
+
+      <label class="TodosectionTitle">
+        <p class="TodosectionTitle-text">Remaining</p>
+        <p class="TodosectionTitle-count">0/3</p>
+      </label>
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p>Type something</p>
+            <p class="Todocontainer-date">Jan 21</p>
+          </label>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p>Type something</p>
+            <p class="Todocontainer-date">Jan 22</p>
+          </label>
+        </li>
+      </ul>
+
+
+      <ul>
+        <li class="Todoitem">
+          <label class="Todoitem-container">
+            <input class="Todo-checkbox" type="checkbox">
+            <p>Type something</p>
+            <p class="Todocontainer-date">Jan 23</p>
+          </label>
+        </li>
+      </ul>
+
+    </section>
+
+
+
+  </article>
+</body>
+
+</html>
