@@ -10,19 +10,24 @@ section{
   margin-left: 32px;
 }
 
-.TodoItem:hover {
+.TodoItem-container:hover{
   background-color: #F1EDF7;
 }
 
-.TodoItem:hover .TodoItem-delete{
+
+.TodoItem-container:hover .TodoItem-delete {
   visibility: visible;
 }
 
-.TodoItem-delete{
-  visibility: hidden;
-  margin-left: 10px;
-  height: 12.2px;
+.TodoItem-delete >img{
+  width:16px;
 }
+
+.TodoItem-delete {
+  visibility: hidden;
+  margin-left: 8px;
+}
+
 
 p{
   font-family: OpenSans;
@@ -112,13 +117,13 @@ body{
   margin-left:10px;
 }
 
-.Todoitem{
+.TodoItem{
   font-size: 14px;
   color:#453C52;
   margin-bottom: 4px;
 }
 
-.Todoitem-container{
+.TodoItem-container{
   display:flex;
   padding:2px 8px;
   align-items:center;
