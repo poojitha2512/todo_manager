@@ -19,7 +19,7 @@ section{
 }
 
 .TodoItem-delete{
-  visibility: visible;
+  visibility: hidden;
   margin-left: 10px;
   height: 12.2px;
 }
