@@ -4,7 +4,8 @@ class TodosController < ApplicationController
 
   def index
 
-    render plain: Todo.all.map { |todo| todo.to_pleasant_string }.join("\n")
+    # render plain: Todo.all.map { |todo| todo.to_pleasant_string }.join("\n")
+    render "index"
   end
 
   def show
@@ -23,8 +24,6 @@ class TodosController < ApplicationController
     )
     response_text = "hey new todo created with id #{new_todo.id}"
     render plain: response_text
-
-
   end
 
   def update

@@ -145,12 +145,10 @@ body{
   width:16px;
 }
 
-.Todocontainer-overdue{
-  font-family:OpenSans;
+.TodoItem-dueDate{
   font-size: 12px;
-  color: #C53030;
-  letter-spacing: 0.09px;
-  margin-left:10px;
+  color: rgb(114, 108, 122);
+  margin-left: 10px;
 }
 
 .Todocontainer-date{
