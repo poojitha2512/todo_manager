@@ -12,12 +12,12 @@
             <input class="Todo-checkbox" type="checkbox">
 
             <% if show_due_date %>
-                  <p>showing date   </p>
+
                    <%=todo.todo_text%>
                    <p class="TodoItem-dueDate">
                    <%=todo.due_date.to_s(:short)%></p>
             <%else%>
-              <p>notshowing date   </p>
+
               <%=todo.todo_text%>
             <%end%>
             <img class="TodoItem-delete" src="trashcan.svg">

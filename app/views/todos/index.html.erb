@@ -8,12 +8,13 @@
       <input class="Addtodo-Button" type="button" value="Add">
     </section>
 
-  <p>in index</p>
+
    <%= render partial: "todo-section", locals: {
      section_title: "Overdue",
      todos:Todo.overdue.not_completed,
      show_due_date: true
      }%>
+
    <%= render partial: "todo-section", locals: {
      section_title: "Due Today",
      todos:Todo.due_today,
