@@ -133,6 +133,11 @@ body{
   letter-spacing: 0.1px;
 }
 
+.TodoItem-completedText{
+  text-decoration: line-through;
+}
+
+
 .Todo-checkbox{
   background: #FFFFFF;
   border: 1px solid #BFB8CC;
