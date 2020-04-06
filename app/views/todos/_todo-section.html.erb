@@ -11,17 +11,22 @@
         <li class="TodoItem">
           <label class="TodoItem-container">
             <input class="Todo-checkbox" type="checkbox">
-            <%=todo.todo_text%>
+
             <% if show_due_date %>
-              <% if non_overdue %>
+              <% if is_overdue %>
                 <% if todo.completed %>
+                <%else%>
+                   <%=todo.todo_text%>
                    <p class="TodoItem-dueDate">
                    <%=todo.due_date.to_s(:short)%></p>
                 <% end %>
               <%else%>
-                  <p class="TodoItem-dueDate">
-                  <%=todo.due_date.to_s(:short)%></p>
+                   <%=todo.todo_text%>
+                   <p class="TodoItem-dueDate">
+                   <%=todo.due_date.to_s(:short)%></p>
               <%end%>
+            <%else%>
+              <%=todo.todo_text%>
             <%end%>
             <img class="TodoItem-delete" src="trashcan.svg">
           </label>

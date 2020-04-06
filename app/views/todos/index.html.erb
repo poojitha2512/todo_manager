@@ -13,19 +13,19 @@
      section_title: "Overdue",
      todos:Todo.overdue,
      show_due_date: true,
-     non_overdue: true
+     is_overdue: true
      }%>
    <%= render partial: "todo-section", locals: {
      section_title: "Due Today",
      todos:Todo.due_today,
      show_due_date: false,
-     non_overdue: false
+     is_overdue: false
      }%>
    <%= render partial: "todo-section", locals: {
      section_title: "Due Later",
      todos:Todo.due_later,
      show_due_date: true,
-     non_overdue: false
+     is_overdue: false
 
      }%>
 
