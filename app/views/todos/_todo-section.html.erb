@@ -1,5 +1,4 @@
  <section class="Todosection">
-
       <label class="TodosectionTitle">
         <p class="TodosectionTitle-text"><%= section_title %></p>
         <p class="TodosectionTitle-count"><%= todos.completed.count%>/<%= todos.count %></p>
@@ -13,19 +12,12 @@
             <input class="Todo-checkbox" type="checkbox">
 
             <% if show_due_date %>
-              <% if is_overdue %>
-                <% if todo.completed %>
-                <%else%>
+                  <p>showing date   </p>
                    <%=todo.todo_text%>
                    <p class="TodoItem-dueDate">
                    <%=todo.due_date.to_s(:short)%></p>
-                <% end %>
-              <%else%>
-                   <%=todo.todo_text%>
-                   <p class="TodoItem-dueDate">
-                   <%=todo.due_date.to_s(:short)%></p>
-              <%end%>
             <%else%>
+              <p>notshowing date   </p>
               <%=todo.todo_text%>
             <%end%>
             <img class="TodoItem-delete" src="trashcan.svg">
