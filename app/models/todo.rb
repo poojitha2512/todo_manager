@@ -11,7 +11,7 @@ class Todo < ActiveRecord::Base
   end
 
   def self.overdue
-    all.where("due_date < ?", Date.today)
+    all.where("due_date < ? and (not completed)", Date.today).ordered
   end
 
   def self.due_today
@@ -29,7 +29,6 @@ class Todo < ActiveRecord::Base
   def self.not_completed
     all.where(completed: false)
   end
-
 
   def self.show_list
     puts "My Todo-list\n\n"
@@ -56,6 +55,4 @@ class Todo < ActiveRecord::Base
     todo_record.update(completed: true)
     todo_record
   end
-
-
 end
