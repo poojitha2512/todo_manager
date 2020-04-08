@@ -1,14 +1,13 @@
-  <section class="Todosection">
-      <label class="TodosectionTitle">
-        <p class="TodosectionTitle-text"><%= section_title %></p>
-        <p class="TodosectionTitle-count"><%= todos.completed.count%>/<%= todos.count %></p>
-      </label>
+<section class="Todosection">
+  <label class="TodosectionTitle">
+    <p class="TodosectionTitle-text"><%= section_title %></p>
+    <p class="TodosectionTitle-count"><%= todos.completed.count%>/<%= todos.count %></p>
+  </label>
 
-      <ul>
-      <% todos.all.each do |todo| %>
-
-        <li class="TodoItem">
-          <label class="TodoItem-container">
+  <ul>
+    <% todos.all.each do |todo| %>
+      <li class="TodoItem">
+        <label class="TodoItem-container">
           <%= form_with(url: "/todos/#{todo.id}", method: "PUT") do %>
             <input
               class="Todo-checkbox"
@@ -19,19 +18,20 @@
             <% end %>
 
             <p class='<%= todo.completed ? "TodoItem-completedText": ""%>'>
-            <%=todo.todo_text%>
+              <%=todo.todo_text%>
             </p>
 
             <% if show_due_date %>
-                   <p class="TodoItem-dueDate">
-                   <%=todo.due_date.to_s(:short)%></p>
+              <p class="TodoItem-dueDate">
+                <%=todo.due_date.to_s(:short)%>
+              </p>
             <% end %>
+
             <%= form_with(url: "/todos/#{todo.id}", method: "DELETE") do %>
               <input type='image'  class="TodoItem-delete" src="trashcan.svg">
             <% end %>
           </label>
-        </li>
-
-      <% end %>
-      </ul>
-  </section>
+      </li>
+    <% end %>
+  </ul>
+</section>
