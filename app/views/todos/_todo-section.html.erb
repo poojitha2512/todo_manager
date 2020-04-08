@@ -9,7 +9,7 @@
 
         <li class="TodoItem">
           <label class="TodoItem-container">
-          <%= form_with(url: "/todos/#{todo.id}", method="PUT") do %>
+          <%= form_with(url: "/todos/#{todo.id}", method: "PUT") do %>
             <input
               class="Todo-checkbox"
               name="completed"
