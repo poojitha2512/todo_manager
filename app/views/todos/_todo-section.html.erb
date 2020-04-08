@@ -14,8 +14,9 @@
               class="Todo-checkbox"
               name="completed"
               type="checkbox" <%=todo.completed ? "checked" : ""%>
+              onclick= "this.form.submit()"
             >
-            <input type="submit" value="Update">
+
             <% end %>
             <p class='<%= todo.completed ? "TodoItem-completedText": ""%>'>
             <%=todo.todo_text%>
