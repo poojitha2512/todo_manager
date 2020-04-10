@@ -15,22 +15,22 @@
               type="checkbox" <%=todo.completed ? "checked" : ""%>
               onclick= "this.form.submit()"
             >
-            <% end %>
+          <% end %>
 
-            <p class='<%= todo.completed ? "TodoItem-completedText": ""%>'>
-              <%=todo.todo_text%>
-            </p>
+          <p class='<%= todo.completed ? "TodoItem-completedText": ""%>'>
+            <%=todo.todo_text%>
+          </p>
 
-            <% if show_due_date %>
-              <p class="TodoItem-dueDate">
-                <%=todo.due_date.to_s(:short)%>
+          <% if show_due_date %>
+            <p class="TodoItem-dueDate">
+              <%=todo.due_date.to_s(:short)%>
               </p>
-            <% end %>
+          <% end %>
 
-            <%= form_with(url: "/todos/#{todo.id}", method: "DELETE") do %>
-              <input type='image'  class="TodoItem-delete" src="trashcan.svg">
-            <% end %>
-          </label>
+          <%= form_with(url: "/todos/#{todo.id}", method: "DELETE") do %>
+            <input type='image'  class="TodoItem-delete" src="trashcan.svg">
+          <% end %>
+        </label>
       </li>
     <% end %>
   </ul>
