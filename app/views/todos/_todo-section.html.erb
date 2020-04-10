@@ -24,7 +24,7 @@
           <% if show_due_date %>
             <p class="TodoItem-dueDate">
               <%=todo.due_date.to_s(:short)%>
-              </p>
+            </p>
           <% end %>
 
           <%= form_with(url: "/todos/#{todo.id}", method: "DELETE") do %>
