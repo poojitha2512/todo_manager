@@ -6,6 +6,10 @@ class Todo < ActiveRecord::Base
     "#{id}. #{due_date.to_s(:long)} #{todo_text} #{is_completed}"
   end
 
+  def self.of_user(user)
+    all.where(user_id: user.id)
+  end
+
   def to_displayable_string
     display_status = completed ? "[X]" : "[ ]"
     display_date = Date.today == due_date ? nil : due_date
