@@ -1,7 +1,11 @@
 <section class="Todosection">
   <label class="TodosectionTitle">
-    <p class="TodosectionTitle-text"><%= section_title %></p>
-    <p class="TodosectionTitle-count"><%= todos.completed.count%>/<%= todos.count %></p>
+    <p class="TodosectionTitle-text">
+      <%= section_title %>
+    </p>
+    <p class="TodosectionTitle-count">
+      <%= todos.completed.count %>/<%= todos.count %>
+    </p>
   </label>
 
   <ul>
@@ -17,13 +21,13 @@
             >
           <% end %>
 
-          <p class='<%= todo.completed ? "TodoItem-completedText": ""%>'>
-            <%=todo.todo_text%>
+          <p class='<%= todo.completed ? "TodoItem-completedText": "" %>'>
+            <%= todo.todo_text %>
           </p>
 
           <% if show_due_date %>
             <p class="TodoItem-dueDate">
-              <%=todo.due_date.to_s(:short)%>
+              <%= todo.due_date.to_s(:short) %>
             </p>
           <% end %>
 
