@@ -3,7 +3,6 @@ class TodosController < ApplicationController
   #skip_before_action :verify_authenticity_token
 
   def index
-    # render plain: Todo.all.map { |todo| todo.to_pleasant_string }.join("\n")
     @todos = current_user.todos
     render "index"
   end
@@ -29,8 +28,6 @@ class TodosController < ApplicationController
       flash[:error] = new_todo.errors.full_messages.join(", ")
       redirect_to todos_path
     end
-    #response_text = "hey new todo created with id #{new_todo.id}"
-    #render plain: response_text
   end
 
   def update
@@ -39,7 +36,6 @@ class TodosController < ApplicationController
     todo = current_user.todos.find(id)
     todo.completed = completed
     todo.save!
-    #render plain: "updated todo #{completed}"
     redirect_to todos_path
   end
 
